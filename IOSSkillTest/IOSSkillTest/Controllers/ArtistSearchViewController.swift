@@ -23,6 +23,7 @@ class ArtistSearchViewController: UIViewController, UITableViewDataSource, UITab
 	@IBOutlet weak var albumsTableView: UITableView!
 	
 	var artist: Artist? = nil
+	var selectedAlbum: Album? = nil
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,12 @@ class ArtistSearchViewController: UIViewController, UITableViewDataSource, UITab
 		
 	}
 	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if let destinationViewController = segue.destinationViewController as? AlbumViewController {
+			destinationViewController.album = selectedAlbum
+		}
+	}
+	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
 		let cell = tableView.dequeueReusableCellWithIdentifier("cellId", forIndexPath: indexPath) as! CustomCellTableViewCell
@@ -106,6 +113,13 @@ class ArtistSearchViewController: UIViewController, UITableViewDataSource, UITab
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return artist?.albums.count ?? 0
+	}
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		if let artist = artist {
+			selectedAlbum = artist.albums[indexPath.row]
+			tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+		}
 	}
 
 }

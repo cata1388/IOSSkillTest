@@ -14,13 +14,15 @@ class Album: NSObject {
 	let imageURL: NSURL
 	let name: String
 	let available: [String]
+	let externalURL: NSURL
 	
-	init(id: String, imageURL: NSURL, name: String, available: [String]) {
+	init(id: String, imageURL: NSURL, name: String, available: [String], externalURL: NSURL) {
 		
 		self.id = id
 		self.imageURL = imageURL
 		self.name = name
 		self.available = available
+		self.externalURL = externalURL
 		
 	}
 	
@@ -47,12 +49,14 @@ class Album: NSObject {
 						images = contentItem["images"] as? [AnyObject],
 						contentImages = images.first as? [String: AnyObject],
 						imageURL = contentImages["url"] as? String,
-						availability = contentItem["available_markets"] as? [String]
+						availability = contentItem["available_markets"] as? [String],
+						externalURLs = contentItem["external_urls"] as? [String: AnyObject],
+						externalURL = externalURLs["spotify"] as? String
 						else {
 							completion(albums: nil , error: "no data founded")
 							return
 					}
-					let album = Album(id: id, imageURL: NSURL(string: imageURL) ?? NSURL(), name: name, available: availability)
+					let album = Album(id: id, imageURL: NSURL(string: imageURL) ?? NSURL(), name: name, available: availability, externalURL: NSURL(string: externalURL) ?? NSURL())
 					albums.append(album)
 					
 				}

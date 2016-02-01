@@ -15,6 +15,7 @@
 		CE99878A1C5D51EA00D5D92E /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987891C5D51EA00D5D92E /* Artist.swift */; };
 		CE99878C1C5D520300D5D92E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99878B1C5D520300D5D92E /* Album.swift */; };
 		CE9D5D671C5EF7EA00AEC90F /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D5D661C5EF7EA00AEC90F /* CustomCellTableViewCell.swift */; };
+		CE9D5D691C5F159800AEC90F /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D5D681C5F159800AEC90F /* AlbumViewController.swift */; };
 		CEEFCDB91C5D631C000C49E4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCDB81C5D631C000C49E4 /* SessionManager.swift */; };
 		CEF6E2441C5EE738004083BA /* ArtistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E2431C5EE738004083BA /* ArtistSearchViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		CE9987891C5D51EA00D5D92E /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Models/Artist.swift; sourceTree = "<group>"; };
 		CE99878B1C5D520300D5D92E /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = Models/Album.swift; sourceTree = "<group>"; };
 		CE9D5D661C5EF7EA00AEC90F /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCellTableViewCell.swift; path = Views/CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		CE9D5D681C5F159800AEC90F /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumViewController.swift; path = Controllers/AlbumViewController.swift; sourceTree = "<group>"; };
 		CEEFCDB81C5D631C000C49E4 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Helpers/SessionManager.swift; sourceTree = "<group>"; };
 		CEF6E2431C5EE738004083BA /* ArtistSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistSearchViewController.swift; path = Controllers/ArtistSearchViewController.swift; sourceTree = "<group>"; };
 		EAC2075FEF5A29CA0E5A47C3 /* Pods-IOSSkillTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSSkillTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSSkillTest/Pods-IOSSkillTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF6E2431C5EE738004083BA /* ArtistSearchViewController.swift */,
+				CE9D5D681C5F159800AEC90F /* AlbumViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				CEEFCDB91C5D631C000C49E4 /* SessionManager.swift in Sources */,
 				CE99878C1C5D520300D5D92E /* Album.swift in Sources */,
 				CEF6E2441C5EE738004083BA /* ArtistSearchViewController.swift in Sources */,
+				CE9D5D691C5F159800AEC90F /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
