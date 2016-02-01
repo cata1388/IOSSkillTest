@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-IOSSkillTest/AFNetworking.framework"
+  install_framework "Pods-IOSSkillTest/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-IOSSkillTest/AFNetworking.framework"
+  install_framework "Pods-IOSSkillTest/SVProgressHUD.framework"
 fi

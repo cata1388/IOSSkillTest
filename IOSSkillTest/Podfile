@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'IOSSkillTest' do
    pod 'AFNetworking', '~> 2.0'
+   pod 'SVProgressHUD'
 end
 

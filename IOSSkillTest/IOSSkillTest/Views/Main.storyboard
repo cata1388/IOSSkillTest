@@ -6,10 +6,10 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Artist Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ArtistSearchViewController" customModule="IOSSkillTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -45,6 +45,9 @@
                                         <state key="normal" title="search">
                                             <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="searchActionTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJg-kn-XQ4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -60,27 +63,27 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-wc-9dV">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="hXj-wc-9dV" secondAttribute="height" multiplier="1:1" id="GiF-hc-dyG"/>
                                             <constraint firstAttribute="width" constant="70" id="al6-sJ-vtH"/>
+                                            <constraint firstAttribute="height" constant="70" id="b5S-hq-Wvv"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="llZ-4B-018">
                                         <rect key="frame" x="85" y="4" width="475" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfJ-To-QAL">
-                                                <rect key="frame" x="0.0" y="0.0" width="475" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="475" height="21"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-ap-vza">
-                                                <rect key="frame" x="0.0" y="20.5" width="475" height="21"/>
+                                                <rect key="frame" x="0.0" y="21" width="475" height="21"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2P-J6-Gnw">
-                                                <rect key="frame" x="0.0" y="41.5" width="475" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="42" width="475" height="21"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -89,6 +92,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="sWs-ap-vza" firstAttribute="leading" secondItem="axD-bR-LP9" secondAttribute="leading" constant="85" id="3YT-Ax-bmI"/>
                                     <constraint firstItem="hXj-wc-9dV" firstAttribute="leading" secondItem="axD-bR-LP9" secondAttribute="leading" id="QTg-QR-fF1"/>
                                     <constraint firstItem="llZ-4B-018" firstAttribute="top" secondItem="axD-bR-LP9" secondAttribute="top" constant="4" id="STq-MQ-Ugc"/>
                                     <constraint firstAttribute="bottom" secondItem="llZ-4B-018" secondAttribute="bottom" constant="4" id="fE1-AQ-IFl"/>
@@ -106,7 +110,7 @@
                                 <rect key="frame" x="20" y="301.5" width="560" height="290.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="n22-vB-bqU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellId" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" id="n22-vB-bqU" customClass="CustomCellTableViewCell" customModule="IOSSkillTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n22-vB-bqU" id="f2m-vP-Nax">
@@ -117,7 +121,6 @@
                                                     <rect key="frame" x="5" y="0.0" width="44" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="9Ap-pg-GKA" secondAttribute="height" multiplier="44:43" id="gnZ-Z5-O8j"/>
-                                                        <constraint firstAttribute="width" constant="44" id="tGk-K4-3Fw"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5KN-5D-KIb">
@@ -148,8 +151,17 @@
                                                 <constraint firstItem="9Ap-pg-GKA" firstAttribute="leading" secondItem="f2m-vP-Nax" secondAttribute="leading" constant="5" id="q3I-gD-neL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumImage" destination="9Ap-pg-GKA" id="S8Y-P9-I3z"/>
+                                            <outlet property="albumNameLabel" destination="KI3-Ho-4zf" id="NZi-Fn-Cn3"/>
+                                            <outlet property="availabilityLabel" destination="w2B-Hx-1Fx" id="Y5s-Bz-dZ8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Z8G-Ii-vwp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uuU-TG-jst"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -171,6 +183,17 @@
                             <constraint firstItem="hmG-ld-f41" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="rLt-AY-0qE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="albumsLabel" destination="xnq-vK-Xyt" id="xZQ-Mt-CbW"/>
+                        <outlet property="albumsTableView" destination="hmG-ld-f41" id="UZK-e1-VKi"/>
+                        <outlet property="artistFollowers" destination="sWs-ap-vza" id="RMt-1X-i8j"/>
+                        <outlet property="artistImage" destination="hXj-wc-9dV" id="Pb3-Jk-7r9"/>
+                        <outlet property="artistInformationStack" destination="axD-bR-LP9" id="kJ2-2Y-poq"/>
+                        <outlet property="artistNameLabel" destination="VfJ-To-QAL" id="UoL-ej-dlI"/>
+                        <outlet property="artistPopularity" destination="K2P-J6-Gnw" id="U9W-0K-XA8"/>
+                        <outlet property="resultLabel" destination="eAS-TP-W1R" id="94p-pL-VDE"/>
+                        <outlet property="searchArtistTextField" destination="hlb-dz-tR3" id="hLd-XJ-7Di"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

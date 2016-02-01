@@ -14,7 +14,9 @@
 		CE99877F1C5D510900D5D92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99877D1C5D510900D5D92E /* LaunchScreen.storyboard */; };
 		CE99878A1C5D51EA00D5D92E /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987891C5D51EA00D5D92E /* Artist.swift */; };
 		CE99878C1C5D520300D5D92E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99878B1C5D520300D5D92E /* Album.swift */; };
+		CE9D5D671C5EF7EA00AEC90F /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D5D661C5EF7EA00AEC90F /* CustomCellTableViewCell.swift */; };
 		CEEFCDB91C5D631C000C49E4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCDB81C5D631C000C49E4 /* SessionManager.swift */; };
+		CEF6E2441C5EE738004083BA /* ArtistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6E2431C5EE738004083BA /* ArtistSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,9 @@
 		CE9987801C5D510900D5D92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9987891C5D51EA00D5D92E /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Models/Artist.swift; sourceTree = "<group>"; };
 		CE99878B1C5D520300D5D92E /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = Models/Album.swift; sourceTree = "<group>"; };
+		CE9D5D661C5EF7EA00AEC90F /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCellTableViewCell.swift; path = Views/CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		CEEFCDB81C5D631C000C49E4 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Helpers/SessionManager.swift; sourceTree = "<group>"; };
+		CEF6E2431C5EE738004083BA /* ArtistSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistSearchViewController.swift; path = Controllers/ArtistSearchViewController.swift; sourceTree = "<group>"; };
 		EAC2075FEF5A29CA0E5A47C3 /* Pods-IOSSkillTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSSkillTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSSkillTest/Pods-IOSSkillTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CE112FF51C5ED04000FEF9F9 /* Main.storyboard */,
+				CE9D5D661C5EF7EA00AEC90F /* CustomCellTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 		CE9987881C5D515600D5D92E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEF6E2431C5EE738004083BA /* ArtistSearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 			files = (
 				CE99878A1C5D51EA00D5D92E /* Artist.swift in Sources */,
 				CE9987751C5D510900D5D92E /* AppDelegate.swift in Sources */,
+				CE9D5D671C5EF7EA00AEC90F /* CustomCellTableViewCell.swift in Sources */,
 				CEEFCDB91C5D631C000C49E4 /* SessionManager.swift in Sources */,
 				CE99878C1C5D520300D5D92E /* Album.swift in Sources */,
+				CEF6E2441C5EE738004083BA /* ArtistSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
